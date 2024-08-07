@@ -41,7 +41,7 @@ def tokenize_data(tokenizer, texts):
 
   tokenized_texts = []
   for text in texts:
-    # Fix the error by removing the `return_tensors='pt'` argument.
+    
     tokens = tokenizer(text, padding=True, truncation=True, max_length=128)['input_ids']
     tokenized_texts.append(tokens)
 
